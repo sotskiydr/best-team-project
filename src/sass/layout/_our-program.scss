@@ -1,5 +1,10 @@
 .our-program {
     background-color: #111518;
+    padding: 50px 0;
+}
+
+.first-container {
+    margin-bottom: 50px;
 }
 
 .our-program__title {
@@ -9,6 +14,13 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $additionalColor;
+    margin-bottom: 50px;
+}
+
+.our-program__item {
+    border-left: 1px solid $additionalColor;
+    padding-left: 20px;
+    margin-left: 75px;
 }
 
 .our-program__item-title {
@@ -18,14 +30,26 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: $additionalColor;
+    margin-bottom: 10px;
 }
 
 .our-program__description-title {
+    display: flex;
     font-weight: 700;
     font-size: 12px;
     line-height: 164.9%;
     letter-spacing: 0.08em;
     color: $accentColor;
+    margin: 10px 0;
+    &::before {
+        display: inline-block;
+        align-self: center;
+        content: "";
+        background-color: $accentColor;
+        width: 15px;
+        height: 2px;
+        margin-right: 5px;
+    }
 }
 
 .our-program__description-text-item {
@@ -37,8 +61,48 @@
     opacity: 0.5;
 }
 
+.choose-us__title {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: $additionalColor;
+    max-width: 180px;
+    margin-bottom: 30px;
+}
+
 .choose-us__list {
     background-color: $additionalColor;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px 22px 0px;
+}
+
+.choose-us__item-title {
+    display: flex;
+    color: $accentColor;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 164.9%;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    &::before {
+        display: inline-block;
+        align-self: center;
+        content: "";
+        background-color: $accentColor;
+        width: 15px;
+        height: 2px;
+        margin-right: 5px;
+    }
+}
+
+.choose-us__item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.choose-use__description {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: calc(24/14);
+    letter-spacing: 0.08em;
+    color: $mainColor;
 }
