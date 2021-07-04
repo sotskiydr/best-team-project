@@ -1,0 +1,176 @@
+.registration {
+  max-width: 480px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background-color: $mainColor;
+  background-image: url(../images/registration-form/bg-form-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1.3;
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $additionalColor;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 0.08em;
+
+    color: $additionalColor;
+
+    &_accent {
+      color: $accentColor;
+    }
+  }
+}
+
+.registration-form {
+  &__fields {
+    margin-bottom: 50px;
+  }
+
+  &__thumb {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 15px;
+    left: 28px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.08em;
+
+    color: $additionalColor;
+  }
+
+  &__input {
+    width: 280px;
+    height: 48px;
+
+    background-color: transparent;
+    border: 1px solid $additionalColor;
+    outline: none;
+
+    transition: border 500ms linear;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $accentColor;
+    }
+  }
+
+  &__button {
+    width: 260px;
+    height: 48px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    align-items: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    background-color: $accentColor;
+    color: $additionalColor;
+    border: none;
+
+    cursor: pointer;
+  }
+}
+
+@include device-size(tablet) {
+  .registration {
+    padding-bottom: 70px;
+    max-width: 768px;
+
+    background-image: url(../images/registration-form/bg-form-tablet.png);
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 1.21;
+    }
+  }
+
+  .registration-form {
+    &__fields {
+      margin-bottom: 30px;
+    }
+
+    &__thumb {
+    }
+
+    &__input {
+      width: 390px;
+    }
+  }
+}
+
+@include device-size(desktop) {
+  .registration {
+    max-width: 1680px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+
+    background-image: url(../images/registration-form/bg-form-desktop.png);
+
+    &__title {
+      font-size: 46px;
+    }
+
+    &__text {
+      margin-bottom: 56px;
+
+      font-size: 30px;
+      line-height: 1.23;
+    }
+  }
+
+  .registration-form {
+    &__label {
+      top: 23px;
+      left: 40px;
+
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    &__input {
+      width: 478px;
+      height: 70px;
+    }
+
+    &__button {
+      width: 354px;
+      height: 70px;
+
+      font-size: 14px;
+      line-height: 1.21;
+    }
+  }
+}
