@@ -17,7 +17,11 @@
     margin-bottom: 50px;
 }
 
-.our-program__item {
+.our-program__item:not(:first-child) {
+    margin-top: 40px;
+}
+
+.our-program__list {
     border-left: 1px solid $additionalColor;
     padding-left: 20px;
     margin-left: 75px;
