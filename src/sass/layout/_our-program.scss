@@ -1,8 +1,44 @@
+.our-program {
+    background-color: #111518;
+}
+
 .our-program__title {
     font-weight: 800;
     font-size: 20px;
     line-height: 130%;
     text-align: center;
     letter-spacing: 0.03em;
+    color: $additionalColor;
+}
+
+.our-program__item-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(28/14);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $additionalColor;
+}
+
+.our-program__description-title {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 164.9%;
+    letter-spacing: 0.08em;
+    color: $accentColor;
+}
+
+.our-program__description-text-item {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(20/12);
+    letter-spacing: 0.08em;
     color: $secondColor;
+    opacity: 0.5;
+}
+
+.choose-us__list {
+    background-color: $additionalColor;
+    padding-left: 20px;
+    padding-right: 20px;
 }
