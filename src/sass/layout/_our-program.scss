@@ -13,7 +13,7 @@
     &::after {
         position: absolute;
         bottom: -100px;
-        left: 110px;
+        right: -77px;
         content: "";
         background-image: url(../images/our-program/program-mobile1x.jpg);
         width: 176px;
@@ -22,6 +22,12 @@
         opacity: 0.5;
         background-size: contain;
         background-repeat: no-repeat;
+    }
+}
+
+@media screen and(min-width:390px) {
+    .our-program__list::after {
+        right: -3px;
     }
 }
 
