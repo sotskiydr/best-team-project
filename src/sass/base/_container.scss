@@ -7,7 +7,7 @@
 
 @include device-size(tablet) {
     .container {
-        width: 768px;
+        min-width: 768px;
         padding-left: 40px;
         padding-right: 40px;
         margin: 0 auto;
@@ -16,7 +16,7 @@
 
 @include device-size(desktop) {
     .container {
-        width: 1314px;
+        min-width: 1314px;
         margin: 0 auto;
         padding: 0;
     }
