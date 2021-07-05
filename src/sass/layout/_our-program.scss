@@ -1,11 +1,38 @@
 .our-program {
-    background-color: #111518;
+    background-image: linear-gradient( to bottom, $mainColor 87%, $additionalColor 13%);
     padding: 50px 0;
 }
 
 .first-container {
     padding-left: 74px;
     margin-bottom: 50px;
+}
+
+.our-program__list {
+    position: relative;
+    &::after {
+        position: absolute;
+        bottom: -100px;
+        left: 109px;
+        content: "";
+        background-image: url(../images/our-program/program-mobile1x.jpg);
+        width: 117px;
+        height: 137px;
+        background-position: -3px;
+        opacity: 0.5;
+    }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: 320px),
+(min-resolution: 192dpi) and (min-width: 320px),
+(min-resolution: 2dppx) and (min-width: 320px) {
+    .our-program__list {
+        &::after {
+            background-image: url(../images/our-program/program-mobile2x.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
 }
 
 .our-program__title {
@@ -26,27 +53,26 @@
     }
 }
 
-.our-program__item-title::before {
-    position: absolute;
-    top: 8px;
-    left: -32px;
-    display: inline-block;
-    content: "";
-    border-radius: 50%;
-    background-color: $accentColor;
-    width: 12px;
-    height: 12px;
-}
-
 .our-program__item-title {
     position: relative;
     font-weight: 700;
     font-size: 14px;
-    line-height: calc(28/14);
+    line-height: 0.1;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: $additionalColor;
     margin-bottom: 10px;
+    &::before {
+        position: absolute;
+        top: -6px;
+        left: -32px;
+        display: inline-block;
+        content: "";
+        border-radius: 50%;
+        background-color: $accentColor;
+        width: 12px;
+        height: 12px;
+    }
 }
 
 .our-program__description-title {
@@ -90,6 +116,7 @@
 .choose-us__list {
     background-color: $additionalColor;
     padding: 20px 22px 0px;
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
 
 .choose-us__item-title {
@@ -112,7 +139,7 @@
 }
 
 .choose-us__item:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 36px;
 }
 
 .choose-use__description {
