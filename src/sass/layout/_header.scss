@@ -1,0 +1,135 @@
+.logo {
+  width: 80px;
+}
+
+.logo__icon-fire {
+  width: 14px;
+  height: 19.5px;
+}
+
+.logo__link {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo__icons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px;
+}
+
+.logo__logo-start-icon {
+  width: 35px;
+  height: 13px;
+}
+.logo__logo-end-icon {
+  width: 23px;
+  height: 13px;
+}
+
+.logo__text {
+  font-size: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $accentColor;
+  line-height: 1.2;
+  letter-spacing: 0.18em;
+}
+
+.logo-light-theme {
+  color: $mainColor;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(17, 21, 24, 0.9);
+    overflow: auto;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .mobile-menu__container {
+    position: relative;
+    padding: 30px 20px;
+  }
+
+  .mobile-menu__close-btn {
+    position: absolute;
+    top: 37px;
+    right: 19.5px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .header__mobile-menu-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .header__mobile-menu-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-menu__item {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.8;
+    color: $additionalColor;
+  }
+
+  .mobile-menu__close-icon {
+    fill: $additionalColor;
+  }
+
+  .mobile-menu__close-btn:hover .mobile-menu__close-icon,
+  .mobile-menu__close-btn:focus .mobile-menu__close-icon {
+    fill: $accentColor;
+  }
+  .dark-theme {
+    fill: $additionalColor;
+    color: $additionalColor;
+  }
+
+  .mobile-menu__nav {
+    margin-top: 50px;
+  }
+
+  .mobile-menu__link:hover, 
+  .mobile-menu__link:focus {
+    color: $accentColor;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__mobile-menu-btn,
+  .mobile-menu {
+    display: none;
+  }
+}
