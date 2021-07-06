@@ -75,7 +75,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: $additionalColor;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     &::before {
         position: absolute;
         top: -6px;
@@ -96,7 +96,7 @@
     line-height: 164.9%;
     letter-spacing: 0.08em;
     color: $accentColor;
-    margin: 10px 0;
+    margin-bottom: 10px;
     &::before {
         display: inline-block;
         align-self: center;
@@ -115,6 +115,10 @@
     letter-spacing: 0.08em;
     color: $secondColor;
     opacity: 0.5;
+}
+
+.our-program__description-item:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 .choose-us__title {
@@ -190,14 +194,15 @@
     }
     .our-program__description-list {
         display: flex;
+        .our-program__description-item {
+            margin-bottom: 0;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
     }
     .our-program__description-text-list {
         width: 200px;
-    }
-    .our-program__description-item {
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
     }
     .our-program__list {
         position: relative;
@@ -274,7 +279,7 @@
     }
     .our-program__item::after {
         position: absolute;
-        top: 284px;
+        top: 310px;
         left: -94px;
         content: "";
         background-image: url(../images/our-program/program-desktop1x.jpg);
@@ -318,6 +323,9 @@
     .our-program__description-list {
         display: flex;
         flex-direction: column;
+        .our-program__description-item:not(:last-child) {
+            margin-bottom: 25px;
+        }
     }
     .our-program__description-text-list {
         width: auto;
