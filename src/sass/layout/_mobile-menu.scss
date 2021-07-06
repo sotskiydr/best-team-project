@@ -1,26 +1,4 @@
 /* MOBILE MENU MOBILE VERSION */
-.mobile-menu__dialog-btn {
-  width: 260px;
-  height: 48px;
-  font-size: 12px;
-  line-height: 1.25;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: $accentColor;
-  border: 2px solid #ff6b09;
-  background-color: transparent;
-  cursor: pointer;
-  text-transform: uppercase;
-  margin: auto;
-  display: block;
-}
-
-@media screen and (max-width: 768px) {
-  .btn-header {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 1314px) {
   .mobile-menu {
     position: fixed;
@@ -57,6 +35,7 @@
       right: 19.5px;
       background-color: transparent;
       border: none;
+      padding: 0;
     }
 
     &__close-icon {
@@ -98,12 +77,10 @@
       line-height: 1, 8;
       letter-spacing: 0.03em;
     }
-  }
-
-  .btn-header {
-    display: block;
-    padding: 0;
-    margin-right: 40px;
+    &__close-btn {
+      right: 43.5px;
+      top: 58.75px;
+    }
   }
 
   .btn-mobile-menu {
@@ -119,5 +96,5 @@
   .mobile-menu {
     display: none;
   }
-  
+
 }
