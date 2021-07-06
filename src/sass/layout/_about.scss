@@ -37,6 +37,15 @@
   line-height: 1.21;
   letter-spacing: 0.06em;
   margin-top: 20px;
+
+  &::after {
+    display: inline-block;
+    content: '';
+    width: 18px;
+    height: 2px;
+    margin-bottom: 27px;
+    background-color: $accentColor;
+  }
 }
 
 .about__item {
@@ -51,5 +60,7 @@
     margin-right: 9px;
     background-image: url(../images/about/teacher-vector.svg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 }
