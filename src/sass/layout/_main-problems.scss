@@ -2,10 +2,9 @@
   background-image: linear-gradient(to bottom, $mainColor 72%, $additionalColor 28%);
   padding-top: 25px;
   padding-bottom: 50px;
-}
-
-.main-problems__help {
-  color: $accentColor;
+  &__help {
+    color: $accentColor;
+  }
 }
 
 .main-problems__title {
@@ -19,15 +18,20 @@
 }
 
 .main-problems__container-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
   background-color: #fff;
   margin-left: 20px;
   margin-right: 20px;
-  padding: 19px 14px 19px 30px;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
 
 .main-problems__list {
   background-color: $additionalColor;
+  counter-reset: number;
+  // padding: 20px 22px;
 }
 
 .main-problems__item-title {
@@ -49,14 +53,117 @@
   }
 }
 
-.main-problems__item:not(:last-child) {
-  margin-bottom: 15px;
-}
-
 .main-problems__description {
   font-weight: 800;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.08em;
   color: $mainColor;
+}
+
+@media screen and (max-width: 768px) {
+  .main-problems__container-second {
+    max-width: 480px;
+    padding: 19px 14px 19px 30px;
+  }
+  .main-problems__title {
+    padding-left: 20px;
+  }
+}
+
+@include device-size(mobile) {
+  .main-problems__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .main-problems__container-first,
+  .main-problems__container-second {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .main-problems__container-second {
+    padding: 19px 14px 19px 30px;
+  }
+}
+
+@include device-size(tablet) {
+  .main-problems {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(to bottom, $mainColor 63%, $additionalColor 37%);
+  }
+
+  .main-problems__title {
+    padding-left: 42px;
+  }
+
+  .main-problems__container-first {
+    max-width: 768px;
+    overflow: hidden;
+  }
+
+  .main-problems__container-second {
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .main-problems__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  .main-problems__item {
+    width: 230px;
+    margin-top: 26px;
+    margin-left: 22px;
+    margin-bottom: 0;
+  }
+}
+
+@include device-size(desktop) {
+  .main-problems {
+    max-width: 1728px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    background-image: url(../images/main-problems/img_campfire.svg),
+      linear-gradient(180deg, #111518 560px, #fff 0);
+    background-repeat: no-repeat;
+    background-position: right 0px top 88px, 0 0;
+
+    &__title {
+      font-size: 46px;
+      padding-left: 183px;
+      margin-bottom: 70px;
+    }
+  }
+
+  .main-problems__container-first {
+    max-width: 1728px;
+  }
+
+  .main-problems__container-second {
+    max-width: 1314px;
+    margin-left: 183px;
+    margin-right: 183px;
+  }
+
+  .main-problems__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    padding-bottom: 70px;
+  }
+  .main-problems__item {
+    width: 307px;
+  }
 }
