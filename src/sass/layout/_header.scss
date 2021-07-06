@@ -1,45 +1,4 @@
-.logo {
-  width: 80px;
-}
 
-.logo__icon-fire {
-  width: 14px;
-  height: 19.5px;
-}
-
-.logo__link {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.logo__icons-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80px;
-}
-
-.logo__logo-start-icon {
-  width: 35px;
-  height: 13px;
-}
-.logo__logo-end-icon {
-  width: 23px;
-  height: 13px;
-}
-
-.logo__text {
-  font-size: 5px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $accentColor;
-  line-height: 1.2;
-  letter-spacing: 0.18em;
-}
-
-.logo-light-theme {
-  color: $mainColor;
-}
 
 .header-wrapper {
   display: flex;
@@ -48,7 +7,8 @@
   padding-top: 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1314px) {
+  // mobile menu
   .mobile-menu {
     position: fixed;
     top: 0;
@@ -93,6 +53,11 @@
     height: 40px;
   }
 
+  .header__mobile-menu-btn:hover .header__mobile-menu-icon,
+  .header__mobile-menu-btn:focus .header__mobile-menu-icon {
+    fill: $accentColor;
+  }
+
   .main-nav {
     display: none;
   }
@@ -112,22 +77,76 @@
   .mobile-menu__close-btn:focus .mobile-menu__close-icon {
     fill: $accentColor;
   }
-  .dark-theme {
-    fill: $additionalColor;
-    color: $additionalColor;
-  }
+
 
   .mobile-menu__nav {
     margin-top: 50px;
   }
 
-  .mobile-menu__link:hover, 
+  .mobile-menu__link:hover,
   .mobile-menu__link:focus {
     color: $accentColor;
   }
+
+  .mobile-menu__dialog-btn {
+    width: 260px;
+    height: 48px;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: $accentColor;
+    border: 2px solid #ff6b09;
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin: auto;
+    display: block;
+  }
+  .btn-header {
+    display: none;
+  }
+  .btn-mobile-menu {
+    margin-top: 50px;
+    padding: 0;
+  }
+  // end of mobile menu
 }
 
 @media screen and (min-width: 768px) {
+  //mobile menu
+  .mobile-menu__container {
+    padding: 40px;
+  }
+
+  .btn-mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu__item {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1, 8;
+    letter-spacing: 0.03em;
+  }
+
+  // end of mobile menu
+
+  .mobile-menu-wrapper {
+    display: flex;
+  }
+
+  .btn-header {
+    display: block;
+    padding: 0;
+    margin-right: 40px;
+  }
+
+  .header-wrapper {
+    padding-top: 40px;
+  }
+}
+@media screen and (min-width: 1315px) {
   .header__mobile-menu-btn,
   .mobile-menu {
     display: none;

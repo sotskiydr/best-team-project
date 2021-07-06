@@ -1,0 +1,78 @@
+/* LOGO MOBILE VERSION */
+.logo {
+  width: 80px;
+
+  &__icons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+  }
+
+  &__link {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__logo-start-icon {
+    width: 35px;
+    height: 13px;
+  }
+
+  &__icon-fire {
+    width: 14px;
+    height: 19.5px;
+  }
+
+  &__logo-end-icon {
+    width: 23px;
+    height: 13px;
+  }
+
+  &__text {
+    font-size: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $accentColor;
+    line-height: 1.2;
+    letter-spacing: 0.18em;
+  }
+}
+
+/* LOGO TABLET AND DESKTOP VERSION */
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 128px;
+
+    &__icons-wrapper {
+      width: 128px;
+    }
+
+    &__logo-start-icon {
+      width: 58px;
+      height: 32px;
+    }
+    &__icon-fire {
+      width: 22px;
+      height: 30px;
+    }
+    &__logo-end-icon {
+      width: 40px;
+      height: 32px;
+    }
+
+    &__text {
+      font-size: 8px;
+      line-height: 1.22;
+    }
+  }
+}
+
+.logo-light-theme {
+  color: $mainColor;
+}
+
+.logo-dark-theme {
+  fill: $additionalColor;
+  color: $additionalColor;
+}
