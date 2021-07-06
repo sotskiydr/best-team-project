@@ -60,7 +60,7 @@
   &::before {
     display: inline-block;
     content: '';
-    width: 25px;
+    width: 17px;
     height: 14px;
     margin-right: 9px;
     background-image: url(../images/about/teacher-vector.svg);
@@ -113,5 +113,49 @@
   .about__description {
     font-size: 10px;
     line-height: 2.8;
+  }
+}
+
+@include device-size(desktop) {
+  .about__container {
+    margin-top: 50px;
+  }
+  .about__title {
+    font-size: 46px;
+    line-height: 1.3;
+  }
+
+  .about__pic {
+    width: 580px;
+    height: 667px;
+  }
+
+  .about__name {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+
+  .about__list {
+    width: 640px;
+  }
+
+  .about__paragraph {
+    font-size: 16px;
+  }
+
+  .about__item::before {
+    width: 27px;
+    height: 20px;
+  }
+
+  .about__description {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: 30px;
+  }
+
+  .about__link {
+    font-size: 18px;
+    line-height: 1.55;
   }
 }
