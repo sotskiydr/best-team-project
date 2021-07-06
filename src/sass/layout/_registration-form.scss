@@ -1,10 +1,14 @@
 .registration {
-  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 50px;
 
   background-color: $mainColor;
-  background-image: url(../images/registration-form/bg-form-mobile.png);
+  background-image: url('../images/registration-form/bg-form-mobile.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -46,6 +50,7 @@
 
   &__thumb {
     position: relative;
+    display: inline-block;
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -54,7 +59,8 @@
 
   &__label {
     position: absolute;
-    top: 15px;
+
+    top: 50%;
     left: 28px;
 
     font-weight: 600;
@@ -63,27 +69,44 @@
     letter-spacing: 0.08em;
 
     color: $additionalColor;
+
+    transform: translateY(-50%);
+    transition: transform 500ms linear, color 500ms linear;
   }
 
   &__input {
     width: 280px;
     height: 48px;
+    padding-left: 28px;
 
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.08em;
+
+    color: $additionalColor;
     background-color: transparent;
     border: 1px solid $additionalColor;
     outline: none;
 
     transition: border 500ms linear;
 
-    &:hover,
     &:focus {
       border: 1px solid $accentColor;
+    }
+
+    &:focus + .registration-form__label,
+    &:not(:placeholder-shown) + .registration-form__label {
+      color: $accentColor;
+      transform: translateY(-40px);
     }
   }
 
   &__button {
     width: 260px;
     height: 48px;
+    padding-top: 14px;
+    padding-bottom: 14px;
 
     font-weight: 700;
     font-size: 12px;
@@ -100,10 +123,18 @@
   }
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  (min-resolution: 192dpi) and (max-width: 767px),
+  (min-resolution: 2dppx) and (max-width: 767px) {
+  .registration {
+    background-image: url('../images/registration-form/bg-form-mobile@2x.png');
+  }
+}
+
 @include device-size(tablet) {
   .registration {
+    // min-width: 768px;
     padding-bottom: 70px;
-    max-width: 768px;
 
     background-image: url(../images/registration-form/bg-form-tablet.png);
 
@@ -112,12 +143,18 @@
     }
 
     &__text {
+      display: inline-block;
+      width: 452px;
+      margin-bottom: 23px;
+
       font-size: 14px;
       line-height: 1.21;
     }
   }
 
   .registration-form {
+    // width: 390px;
+
     &__fields {
       margin-bottom: 30px;
     }
@@ -128,19 +165,31 @@
   }
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  (min-resolution: 192dpi) and (min-width: 768px),
+  (min-resolution: 2dppx) and (min-width: 768px) {
+  .registration {
+    background-image: url('../images/registration-form/bg-form-tablet@2x.png');
+  }
+}
+
 @include device-size(desktop) {
   .registration {
     max-width: 1680px;
     padding-top: 100px;
     padding-bottom: 60px;
 
-    background-image: url(../images/registration-form/bg-form-desktop.png);
+    background-image: url('../images/registration-form/bg-form-desktop.png');
 
     &__title {
+      display: inline-block;
+      width: 1090px;
+
       font-size: 46px;
     }
 
     &__text {
+      width: 1090px;
       margin-bottom: 56px;
 
       font-size: 30px;
@@ -149,8 +198,18 @@
   }
 
   .registration-form {
+    display: inline-block;
+    width: 478px;
+
+    &__fields {
+      margin-bottom: 80px;
+    }
+
+    &__thumb:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
     &__label {
-      top: 23px;
       left: 40px;
 
       font-size: 20px;
@@ -160,6 +219,11 @@
     &__input {
       width: 478px;
       height: 70px;
+
+      &:focus + .registration-form__label,
+      &:not(:placeholder-shown) + .registration-form__label {
+        transform: translateY(-60px);
+      }
     }
 
     &__button {
@@ -169,5 +233,13 @@
       font-size: 14px;
       line-height: 1.21;
     }
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  (min-resolution: 192dpi) and (min-width: 1200px),
+  (min-resolution: 2dppx) and (min-width: 1200px) {
+  .registration {
+    background-image: url('../images/registration-form/bg-form-desktop@2x.png');
   }
 }
