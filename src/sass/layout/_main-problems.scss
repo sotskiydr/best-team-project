@@ -1,0 +1,62 @@
+.main-problems {
+  background-image: linear-gradient(to bottom, $mainColor 72%, $additionalColor 28%);
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+.main-problems__help {
+  color: $accentColor;
+}
+
+.main-problems__title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: start;
+  letter-spacing: 0.03em;
+  color: $additionalColor;
+  margin-bottom: 25px;
+}
+
+.main-problems__container-second {
+  background-color: #fff;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 19px 14px 19px 30px;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+}
+
+.main-problems__list {
+  background-color: $additionalColor;
+}
+
+.main-problems__item-title {
+  display: flex;
+  color: $accentColor;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 164.9%;
+  letter-spacing: 0.08em;
+  margin-bottom: 5px;
+  &::before {
+    display: inline-block;
+    align-self: center;
+    content: '';
+    background-color: $accentColor;
+    width: 15px;
+    height: 2px;
+    margin-right: 5px;
+  }
+}
+
+.main-problems__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.main-problems__description {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.08em;
+  color: $mainColor;
+}
