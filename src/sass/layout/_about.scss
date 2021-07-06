@@ -1,0 +1,161 @@
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about__container {
+  margin-top: 20px;
+}
+
+.about__title {
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.31;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.about__left-site {
+  margin-right: 40px;
+}
+
+.about__right-site {
+  margin-top: 20px;
+}
+
+.about__name {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  &::after {
+    display: inline-block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: $secondColor;
+    margin-top: 10px;
+  }
+}
+
+.about__list {
+  margin-top: 20px;
+
+  &::after {
+    display: inline-block;
+    content: '';
+    width: 18px;
+    height: 2px;
+    margin-bottom: 27px;
+    background-color: $accentColor;
+  }
+}
+
+.about__item {
+  display: flex;
+  margin-bottom: 30px;
+
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 17px;
+    height: 14px;
+    margin-right: 9px;
+    background-image: url(../images/about/teacher-vector.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.about__description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.17;
+  color: $secondColor;
+}
+
+.about__text {
+  margin-bottom: 10px;
+}
+
+.about__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  text-decoration-line: underline;
+  color: $accentColor;
+}
+
+.about__paragraph {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.06em;
+}
+
+@include device-size(tablet) {
+  .about__container {
+    display: flex;
+  }
+
+  .about__right-site {
+    margin: 0;
+  }
+
+  .about__paragraph {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .about__description {
+    font-size: 10px;
+    line-height: 2.8;
+  }
+}
+
+@include device-size(desktop) {
+  .about__container {
+    margin-top: 50px;
+  }
+  .about__title {
+    font-size: 46px;
+    line-height: 1.3;
+  }
+
+  .about__pic {
+    width: 580px;
+    height: 667px;
+  }
+
+  .about__name {
+    font-size: 30px;
+    line-height: 1.23;
+  }
+
+  .about__list {
+    width: 640px;
+  }
+
+  .about__paragraph {
+    font-size: 16px;
+  }
+
+  .about__item::before {
+    width: 27px;
+    height: 20px;
+  }
+
+  .about__description {
+    font-size: 18px;
+    line-height: 1.55;
+    margin-bottom: 30px;
+  }
+
+  .about__link {
+    font-size: 18px;
+    line-height: 1.55;
+  }
+}
