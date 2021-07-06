@@ -1,4 +1,10 @@
 .registration {
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
   margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -53,6 +59,7 @@
 
   &__thumb {
     position: relative;
+    display: inline-block;
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -80,6 +87,7 @@
     height: 48px;
     padding-left: 28px;
 
+
     font-weight: 600;
     font-size: 14px;
     line-height: 1.21;
@@ -106,6 +114,8 @@
   &__button {
     width: 260px;
     height: 48px;
+    padding-top: 14px;
+    padding-bottom: 14px;
 
     font-weight: 700;
     font-size: 12px;
@@ -142,6 +152,10 @@
     }
 
     &__text {
+      display: inline-block;
+      width: 452px;
+      margin-bottom: 23px;
+
       font-size: 14px;
       line-height: 1.21;
     }
@@ -177,10 +191,14 @@
     background-image: url('../images/registration-form/bg-form-desktop.png');
 
     &__title {
+      display: inline-block;
+      width: 1090px;
+
       font-size: 46px;
     }
 
     &__text {
+      width: 1090px;
       margin-bottom: 56px;
 
       font-size: 30px;
@@ -189,7 +207,13 @@
   }
 
   .registration-form {
-    // width: 478px;
+
+    display: inline-block;
+    width: 478px;
+
+    &__fields {
+      margin-bottom: 80px;
+    }
 
     &__thumb:not(:last-child) {
       margin-bottom: 25px;
