@@ -64,3 +64,22 @@
     background-size: contain;
   }
 }
+
+.about__description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.17;
+  color: $secondColor;
+}
+
+.about__text {
+  margin-bottom: 10px;
+}
+
+.about__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  text-decoration-line: underline;
+  color: $accentColor;
+}
