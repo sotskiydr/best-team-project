@@ -105,6 +105,7 @@
         width: 15px;
         height: 2px;
         margin-right: 5px;
+        visibility: visible;
     }
 }
 
@@ -360,4 +361,8 @@
     .choose-us__title {
         display: none;
     }
+}
+
+.hidden-content {
+    visibility: hidden;
 }
