@@ -7,9 +7,12 @@
 @import './utils/mixins';
 @import './base/variables';
 @import './base/common';
-@import './base/container';
-@import "./layout/our-program";
+@import './base/container.scss';
+@import './layout/main-problems';
+@import './layout/our-program';
+@import './layout/registration-form';
 @import "./layout/header";
 @import "./layout/logo";
 @import "./layout/mobile-menu";
-// @import './example';
+@import './site-works';
+@import './about';

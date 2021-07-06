@@ -1,6 +1,6 @@
 @mixin device-size($size) {
     @if $size==mobile {
-        @media (min-width: 320px) {
+        @media (max-width: 320px) {
             @content;
         }
     }
