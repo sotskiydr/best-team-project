@@ -242,12 +242,12 @@
     height: 138px;
   }
 
-  .our-works__name {
-    position: relative;
-    width: 365px;
-    margin-left: 30px;
-    margin-right: 29px;
-  }
+  // .our-works__name {
+  //   position: relative;
+  //   width: 365px;
+  //   margin-left: 30px;
+  //   margin-right: 29px;
+  // }
 
   .our-works__name::after {
     position: absolute;
@@ -261,5 +261,17 @@
     white-space: pre;
     align-items: center;
     text-align: center;
+  }
+
+  .our-works__name-learning {
+    white-space: normal;
+  }
+
+  .our-works__name-manuals {
+    white-space: pre;
+  }
+
+  .our-works__spoken {
+    white-space: normal;
   }
 }
