@@ -18,7 +18,9 @@
   cursor: pointer;
   text-transform: uppercase;
   margin: auto;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -33,7 +35,6 @@
   }
 
   .btn-header {
-    display: block;
     padding: 0;
     margin-right: 40px;
   }
