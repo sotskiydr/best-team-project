@@ -97,6 +97,11 @@
   letter-spacing: 0.06em;
 }
 
+.about__pic {
+  width: 243px;
+  height: 306px;
+}
+
 @include device-size(tablet) {
   .about__container {
     display: flex;
@@ -127,7 +132,7 @@
   }
 
   .about__pic {
-    width: 580px;
+    width: 530px;
     height: 667px;
   }
 
