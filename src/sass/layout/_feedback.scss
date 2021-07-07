@@ -2,6 +2,10 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
+  &__container {
+    display: block;
+  }
+
   &__title {
     font-weight: 800;
     font-size: 20px;
@@ -19,7 +23,7 @@
   &__social-link {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     cursor: pointer;
   }
 
@@ -81,11 +85,15 @@
   .feedback__card {
     position: relative;
   }
+
+  .picture-hidden {
+    display: none;
+  }
 }
 
 .picture-img {
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .picture:not(:last-child) {
@@ -99,14 +107,16 @@
 .arrow-l {
   width: 27px;
   height: 15px;
-  fill: $accentColor;
+  fill: $secondColor;
+  transition: fill 250ms $transitionAnim;
 }
 
 .arrow-r {
   width: 27px;
   height: 15px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
-  fill: $accentColor;
+  fill: $secondColor;
+  transition: fill 250ms $transitionAnim;
 }
 
 .btn-l {
@@ -122,6 +132,11 @@
   transform: translateY(-50%);
 }
 
+.btn-l:hover .arrow-l,
+.btn-l:focus .arrow-l {
+  fill: $accentColor;
+}
+
 .btn-r {
   position: absolute;
   display: block;
@@ -135,10 +150,21 @@
   transform: translateY(-50%);
 }
 
+.btn-r:hover .arrow-r,
+.btn-r:focus .arrow-r {
+  fill: $accentColor;
+}
+
+.picture-hidden {
+  display: none;
+}
+
 /////768
 @include device-size(tablet) {
   .feedback {
-    position: relative;
+    &__slides {
+      position: relative;
+    }
 
     &__title {
       font-size: 26px;
@@ -153,7 +179,16 @@
     }
 
     &__main {
+      display: inline-block;
       margin-right: 46px;
+    }
+
+    &__container {
+      display: flex;
+      padding: 40px;
+      margin-bottom: 30px;
+      background: $additionalColor;
+      box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
     }
 
     &__text {
@@ -173,32 +208,33 @@
     &__social-link {
       margin-bottom: 0;
     }
-  }
-}
-@media screen and(max-width:1313px) {
-  .feedback__container {
-    display: flex;
-    justify-content: center;
-    padding: 40px;
-    padding-right: 40px;
-    margin-bottom: 30px;
-    background: $additionalColor;
-    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
-  }
-}
 
-.picture-img {
-  margin-bottom: 20px;
-}
+    .picture:not(:last-child) {
+      margin-right: 30px;
+    }
 
-.picture:not(:last-child) {
-  margin-right: 30px;
+    .picture-hidden {
+      display: block;
+    }
+  }
+  .picture-img {
+    margin-bottom: 20px;
+  }
+
+  .btn-l {
+    left: -15px;
+  }
+
+  .btn-r {
+    right: -15px;
+  }
 }
 
 /////1314
 @include device-size(desktop) {
   .feedback {
-    margin-bottom: 40px;
+    padding-bottom: 0;
+    margin-bottom: 130px;
 
     &__title {
       font-size: 46px;
@@ -206,17 +242,22 @@
     }
 
     &__container {
+      position: relative;
+      max-width: 1090px;
       display: flex;
       padding-top: 50px;
       padding-right: 112px;
       padding-bottom: 51px;
       padding-left: 82px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 40px;
     }
 
     &__item-title {
       font-size: 30px;
       line-height: 1.23;
-      margin-bottom: 10px;
+      margin-bottom: 2px;
     }
     &__text {
       font-size: 14px;
@@ -224,6 +265,11 @@
     }
 
     &__text-response {
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    &__read-more {
       font-size: 18px;
       line-height: 1.55;
     }
