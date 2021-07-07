@@ -115,9 +115,22 @@
   margin-right: 5px;
 }
 
+.our-works__name-learning {
+  white-space: pre;
+}
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .our-works__item:first-child {
     margin-top: 0;
+  }
+
+  .our-works__support,
+  .our-works__spoken {
+    white-space: pre;
+  }
+  .our-works__manuals {
+    height: 79px;
+    white-space: pre;
   }
 }
 
