@@ -1,0 +1,270 @@
+.our-works {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.our-works__title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.our-works__icon {
+  fill: $accentColor;
+  transition: fill 250ms $transitionAnim;
+}
+
+.our-works__item {
+  height: 280px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+  transition: color 250ms $transitionAnim, background-color 250ms $transitionAnim;
+
+  // &:first-child {
+  //   margin-top: 0;
+  // }
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: $accentColor;
+  }
+
+  &:hover .our-works__icon,
+  &:focus .our-works__icon {
+    fill: #ffffff;
+  }
+
+  &:hover .our-works__description,
+  &:focus .our-works__description {
+    color: #ffffff;
+  }
+}
+
+.our-works__list {
+  margin-top: 30px;
+}
+.our-works__section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 19px;
+}
+
+.our-works__name {
+  position: relative;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  height: 39px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  margin-bottom: 32px;
+
+  &::after {
+    display: block;
+
+    content: '';
+    position: absolute;
+    top: 145%;
+    left: 45%;
+    width: 20px;
+    height: 2px;
+    background-color: $accentColor;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    transition: background-color 250ms $transitionAnim;
+  }
+}
+
+.our-works__item:focus .our-works__name::after,
+.our-works__item:hover .our-works__name::after {
+  background-color: #ffffff;
+}
+
+.our-works__description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: $secondColor;
+}
+
+.our-works__habit {
+  margin-right: 11px;
+  margin-left: 12px;
+}
+
+.our-works__support,
+.our-works__manuals {
+  margin-right: 11px;
+  margin-left: 11px;
+}
+
+.our-works__spoken {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.our-works__name-learning {
+  white-space: pre;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .our-works__item:first-child {
+    margin-top: 0;
+  }
+
+  .our-works__support,
+  .our-works__spoken {
+    white-space: pre;
+  }
+  .our-works__manuals {
+    height: 79px;
+    white-space: pre;
+  }
+}
+
+@include device-size(tablet) {
+  .our-works__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -27px;
+    margin-left: -20px;
+  }
+
+  .our-works__item {
+    height: 334px;
+    flex-basis: calc((100% - 40px) / 2);
+    margin-top: 27px;
+    margin-left: 20px;
+    padding-top: 40px;
+  }
+
+  .our-works__title {
+    font-size: 26px;
+    line-height: 1.31;
+    margin-bottom: 30px;
+  }
+
+  .our-works__name {
+    margin-bottom: 52px;
+  }
+
+  .our-works__section {
+    margin-bottom: 30px;
+  }
+
+  .our-works__program {
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+  .our-works__learning {
+    margin-left: 21px;
+    margin-right: 20px;
+  }
+
+  .our-works__habit {
+    margin-right: 26px;
+    margin-left: 25px;
+  }
+
+  .our-works__support {
+    margin-left: 21px;
+    margin-right: 20px;
+  }
+
+  .our-works__manuals {
+    margin-left: 43px;
+    margin-right: 42px;
+    text-indent: 10px;
+  }
+
+  .our-works__spoken {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+@include device-size(desktop) {
+  .our-works__title {
+    font-size: 46px;
+    line-height: 1.3;
+    text-align: left;
+    margin-bottom: 50px;
+  }
+
+  .our-works__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+
+  .our-works__item {
+    height: 396px;
+    flex-basis: calc((100% - 60px) / 3);
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-bottom: 55px;
+  }
+
+  .our-works__name {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 32px;
+    height: 53px;
+  }
+
+  .our-works__description {
+    font-size: 18px;
+    line-height: 1.56;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .our-works__name-habit {
+    width: 365px;
+    margin-right: 29px;
+    margin-left: 29px;
+  }
+
+  .our-works__support {
+    text-indent: 10px;
+    height: 138px;
+  }
+
+  // .our-works__name::after {
+  //   position: absolute;
+  //   top: 145%;
+  // }
+
+  .our-works__manuals {
+    text-indent: 0;
+    margin-right: 29px;
+    margin-left: 31px;
+    white-space: pre;
+    align-items: center;
+    text-align: center;
+  }
+
+  .our-works__name-learning {
+    white-space: normal;
+  }
+
+  .our-works__name-manuals {
+    white-space: pre;
+  }
+
+  .our-works__spoken {
+    white-space: normal;
+  }
+}
