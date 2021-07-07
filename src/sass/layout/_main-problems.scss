@@ -51,6 +51,9 @@
     margin-bottom: 5px;
   }
 }
+.main-problems__item:not(:last-child) {
+  margin-bottom: 15px;
+}
 
 .main-problems__description {
   font-weight: 800;
@@ -71,9 +74,9 @@
 }
 
 @include device-size(mobile) {
-  .main-problems__item:not(:last-child) {
-    margin-bottom: 15px;
-  }
+  // .main-problems__item:not(:last-child) {
+  //   margin-bottom: 15px;
+  // }
   .main-problems__container-first,
   .main-problems__container-second {
     max-width: 480px;
