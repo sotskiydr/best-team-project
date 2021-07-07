@@ -34,23 +34,25 @@
   // padding: 20px 22px;
 }
 
-.main-problems__item-title {
-  display: flex;
-  color: $accentColor;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 164.9%;
-  letter-spacing: 0.08em;
-  margin-bottom: 5px;
-  &::before {
-    display: inline-block;
-    align-self: center;
-    content: '';
-    background-color: $accentColor;
-    width: 15px;
-    height: 2px;
-    margin-right: 5px;
+.main-problems__item {
+  width: 230px;
+  // margin-top: 26px;
+  // margin-left: 22px;
+  // margin-bottom: 0;
+  &:before {
+    counter-increment: number;
+    content: '\2014 \0020'counter(number, decimal-leading-zero) '';
+    display: flex;
+    color: $accentColor;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 164.9%;
+    letter-spacing: 0.08em;
+    margin-bottom: 5px;
   }
+}
+.main-problems__item:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 .main-problems__description {
@@ -72,9 +74,9 @@
 }
 
 @include device-size(mobile) {
-  .main-problems__item:not(:last-child) {
-    margin-bottom: 15px;
-  }
+  // .main-problems__item:not(:last-child) {
+  //   margin-bottom: 15px;
+  // }
   .main-problems__container-first,
   .main-problems__container-second {
     max-width: 480px;
@@ -126,7 +128,18 @@
     width: 230px;
     margin-top: 26px;
     margin-left: 22px;
-    margin-bottom: 0;
+    // margin-bottom: 0;
+    &:before {
+      counter-increment: number;
+      content: '\2014 \0020'counter(number, decimal-leading-zero) '';
+      display: flex;
+      color: $accentColor;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 164.9%;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -155,15 +168,23 @@
     max-width: 1314px;
     margin-left: 183px;
     margin-right: 183px;
+    // padding: 70px 112px 62px 114px;
+    // padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   .main-problems__list {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 25px;
-    padding-bottom: 70px;
+    padding: 20px 22px 20px;
   }
   .main-problems__item {
-    width: 307px;
+    // width: 195px;
+    margin-top: 35px;
+    margin-left: 35px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
   }
 }

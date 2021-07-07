@@ -75,8 +75,7 @@
     color: $additionalColor;
 
     transform: translateY(-50%);
-    transition: transform 250ms cubic-bezier(0.34, 0.04, 0.37, 0.73),
-      color 250ms cubic-bezier(0.34, 0.04, 0.37, 0.73);
+    transition: transform 250ms $transitionAnim, color 250ms $transitionAnim;
   }
 
   &__input {
@@ -94,7 +93,7 @@
     border: 1px solid $additionalColor;
     outline: none;
 
-    transition: border 250ms cubic-bezier(0.34, 0.04, 0.37, 0.73);
+    transition: border 250ms $transitionAnim;
 
     &:focus {
       border: 1px solid $accentColor;
@@ -104,6 +103,9 @@
     &:not(:placeholder-shown) + .registration-form__label {
       color: $accentColor;
       transform: translateY(-40px);
+    }
+    &:not(:placeholder-shown):required:invalid {
+      border-color: red;
     }
   }
 
