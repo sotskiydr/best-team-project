@@ -13,7 +13,7 @@
 
 .our-works__icon {
   fill: $accentColor;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms $transitionAnim;
 }
 
 .our-works__item {
@@ -24,8 +24,7 @@
   box-sizing: border-box;
   background: #ffffff;
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms $transitionAnim, background-color 250ms $transitionAnim;
 
   // &:first-child {
   //   margin-top: 0;
@@ -80,7 +79,7 @@
     background-color: $accentColor;
     margin: 0 auto;
     margin-bottom: 5px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms $transitionAnim;
   }
 }
 
@@ -222,6 +221,7 @@
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 32px;
+    height: 53px;
   }
 
   .our-works__description {
@@ -242,17 +242,10 @@
     height: 138px;
   }
 
-  // .our-works__name {
-  //   position: relative;
-  //   width: 365px;
-  //   margin-left: 30px;
-  //   margin-right: 29px;
+  // .our-works__name::after {
+  //   position: absolute;
+  //   top: 145%;
   // }
-
-  .our-works__name::after {
-    position: absolute;
-    top: 170%;
-  }
 
   .our-works__manuals {
     text-indent: 0;
