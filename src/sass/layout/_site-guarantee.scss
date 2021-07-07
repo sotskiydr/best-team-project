@@ -3,20 +3,27 @@
 }
 .guarantee__title {
     display: flex;
-    justify-content: center;
+    
     margin-bottom: 30px;
-    text-align: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
 }
 .guarantee__box {
     background-color: $thirdColor;
     padding: 50px 20px;
+    display: flex;
+    // margin-left;
+}
+.box {
+    display: inline-block;
 }
 .guarantee__list {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 .guarantee__item {
-    position: relative;
-    max-width: 245px;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -30,9 +37,9 @@
 .guarantee__color {
     color: $accentColor;
 }
-.fire_list {
-    position: absolute; 
-}
+// .fire_list {
+    
+// }
 .guarantee__pic {
     width: 15px;
     height: 20px;
@@ -43,11 +50,45 @@
     border: 0.5px dashed $secondColor;
     margin-left: 7px;
     width: 0px;
-    height: 52px;
+    height: 34px;
     margin-bottom: 5px;
 }
 .fire__item:first-child::after {
-    height: 68px;
+    height: 48px;
+}
+@media screen and (max-width:447px) {
+    .fire__item:not(:first-child):after {
+        height: 52px;
+    }
+}
+@media screen and (max-width:378px) {
+    .fire__item:not(:first-child):after {
+        height: 52px;
+    }
+    .fire__item:first-child::after {
+        height: 68px;
+    }
+}
+@media screen and (max-width:339px) {
+    .fire__item:not(:last-child):after {
+        height: 68px; 
+    }
+    .fire__item:nth-child(3)::after {
+        height: 52px;
+    }
+}
+@media screen and (max-width:324px) {
+    .fire__item:nth-child(3)::after {
+        height: 76px;
+    }
+}
+@media screen and (max-width:314px) {
+    .fire__item:not(:last-child):after {
+        height: 68px;
+    }
+    .fire__item:first-child::after {
+        height: 90px;
+    }
 }
 @media screen and (max-width:768px) {
     .guarantee__container {
@@ -72,6 +113,13 @@
     }
  }
 @include device-size(desktop) {
+    .guarantee {
+        padding-top: 137px;
+    }
+    .guarantee__title {
+        font-size: 46px;
+        margin-bottom: 50px;
+    }
     .guarantee__item {
         font-size: 20px;
         line-height: 1.4;
