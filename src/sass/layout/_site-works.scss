@@ -130,16 +130,58 @@
   }
 
   .our-works__item {
+    height: 334px;
     flex-basis: calc((100% - 40px) / 2);
     margin-top: 27px;
     margin-left: 20px;
+    padding-top: 40px;
   }
 
   .our-works__title {
+    font-size: 26px;
+    line-height: 1.31;
     margin-bottom: 30px;
   }
-}
 
+  .our-works__name {
+    margin-bottom: 52px;
+  }
+
+  .our-works__section {
+    margin-bottom: 30px;
+  }
+
+  .our-works__program {
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+  .our-works__learning {
+    margin-left: 21px;
+    margin-right: 20px;
+  }
+
+  .our-works__habit {
+    margin-right: 26px;
+    margin-left: 25px;
+  }
+
+  .our-works__support {
+    margin-left: 21px;
+    margin-right: 20px;
+  }
+
+  .our-works__manuals {
+    margin-left: 43px;
+    margin-right: 42px;
+    text-indent: 10px;
+  }
+
+  .our-works__spoken {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
 @include device-size(desktop) {
   .our-works__title {
     font-size: 26px;
