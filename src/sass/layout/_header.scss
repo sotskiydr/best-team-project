@@ -66,13 +66,17 @@
       color: $secondColor;
       font-weight: 700;
     }
-  
+
     &__list-item:not(:last-child) {
       margin-right: 40px;
     }
-  
+
+    &__link {
+      transition: color $transitionDuration $transitionAnim;
+    }
+
     &__link:hover,
-    &__link:focus  {
+    &__link:focus {
       color: $accentColor;
     }
   }
@@ -98,6 +102,7 @@
     &__mobile-menu-icon {
       width: 27px;
       height: 27px;
+      transition: fill $transitionDuration $transitionAnim;
     }
 
     &__mobile-menu-btn:hover &__mobile-menu-icon,
@@ -106,5 +111,3 @@
     }
   }
 }
-
-
