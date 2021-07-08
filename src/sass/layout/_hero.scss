@@ -18,11 +18,8 @@
   }
 
   &__main-btn {
-    width: 260px;
-    height: 48px;
     background-color: $accentColor;
     color: $additionalColor;
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +28,7 @@
     font-size: 12px;
     line-height: 1.25;
     letter-spacing: 0.08em;
+    padding: 14px 33px;
   }
 
   &__picture-wrapper {
@@ -57,8 +55,10 @@
     flex-wrap: wrap;
     margin-top: -25px;
     margin-left: -30px;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
+
   &__features-item {
     margin-top: 25px;
     margin-left: 20px;
@@ -71,6 +71,11 @@
     letter-spacing: 0.08em;
     width: 146px;
     margin-left: 10px;
+  }
+
+  &__main-btn-wrapper {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -115,6 +120,15 @@
       margin: 0;
       margin-top: 50px;
     }
+
+    &__featres-list {
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    &__main-btn-wrapper {
+      justify-content: left;
+    }
   }
 
   .hero__text-btn-img {
@@ -153,8 +167,7 @@
     }
 
     &__main-btn {
-      width: 354px;
-      height: 70px;
+      padding: 26px 70px;
       font-size: 14px;
       letter-spacing: 0.14em;
     }

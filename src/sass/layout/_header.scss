@@ -6,8 +6,6 @@
 }
 
 .header__dialogue-btn {
-  width: 260px;
-  height: 48px;
   font-size: 12px;
   line-height: 1.25;
   font-weight: 700;
@@ -17,10 +15,8 @@
   background-color: transparent;
   cursor: pointer;
   text-transform: uppercase;
-  margin: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -35,7 +31,7 @@
   }
 
   .btn-header {
-    padding: 0;
+    padding: 14px 33px;
     margin-right: 40px;
   }
 }
@@ -50,8 +46,7 @@
   }
 
   .btn-header {
-    width: 336px;
-    height: 70px;
+    padding: 26px 47px;
     margin: 0;
     font-size: 14px;
     letter-spacing: 0.14em;
