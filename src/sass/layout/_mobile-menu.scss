@@ -40,6 +40,7 @@
 
     &__close-icon {
       fill: $additionalColor;
+      transition: fill $transitionDuration $transitionAnim;
     }
 
     &__close-btn:hover &__close-icon,
@@ -47,6 +48,9 @@
       fill: $accentColor;
     }
 
+    &__link {
+      transition: color $transitionDuration $transitionAnim;
+    }
     &__link:hover,
     &__link:focus {
       color: $accentColor;
@@ -96,5 +100,4 @@
   .mobile-menu {
     display: none;
   }
-
 }
