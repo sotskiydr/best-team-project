@@ -33,6 +33,12 @@
   .btn-header {
     padding: 14px 33px;
     margin-right: 40px;
+
+    &:hover,
+    &:focus {
+      color: $additionalColor;
+      background-color: $accentColor;
+    }
   }
 }
 

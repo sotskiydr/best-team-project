@@ -122,11 +122,22 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
 
-    background-color: $accentColor;
-    color: $additionalColor;
     border: none;
 
+    background-color: $accentColor;
+    color: $additionalColor;
     cursor: pointer;
+
+    transition: color $transitionDuration $transitionAnim,
+      background-color $transitionDuration $transitionAnim,
+      border $transitionDuration $transitionAnim;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+      background-color: transparent;
+      border: 2px solid $accentColor;
+    }
   }
 }
 
