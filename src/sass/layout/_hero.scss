@@ -29,6 +29,17 @@
     line-height: 1.25;
     letter-spacing: 0.08em;
     padding: 14px 33px;
+
+    transition: color $transitionDuration $transitionAnim,
+      background-color $transitionDuration $transitionAnim,
+      border $transitionDuration $transitionAnim;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+      background-color: transparent;
+      border: 2px solid $accentColor;
+    }
   }
 
   &__picture-wrapper {

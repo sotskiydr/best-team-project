@@ -1,0 +1,32 @@
+.button-up {
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  width: 80px;
+  height: 48px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  align-items: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  border: 2px solid $accentColor;
+
+  background-color: transparent;
+  color: $accentColor;
+  cursor: pointer;
+
+  transition: color $transitionDuration $transitionAnim,
+    background-color $transitionDuration $transitionAnim, border $transitionDuration $transitionAnim;
+
+  &:hover,
+  &:focus {
+    color: $additionalColor;
+    background-color: $accentColor;
+    outline: none;
+  }
+}
